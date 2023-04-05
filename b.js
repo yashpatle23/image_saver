@@ -1,4 +1,5 @@
 // upload image to github
+
 function uploadImage(data) {
   return fetch(
     `https://api.github.com/repos/${data.owner}/${data.repo}/contents/${data.name}`,
@@ -99,7 +100,11 @@ window.onload = () => {
       return;
     }
     const formData = new FormData($form);
-    const data = {}
+    const data = {
+      owner :"yashpatle23",
+      repo : "document_image",
+      token     : "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"
+    };
     for (let [key, value] of formData.entries()) {
       data[key] = value;
     }
