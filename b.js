@@ -103,7 +103,7 @@ window.onload = () => {
     const data = {
       owner :"yashpatle23",
       repo : "document_image",
-      token     : "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"
+      token     : "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"
     };
     for (let [key, value] of formData.entries()) {
       data[key] = value;
