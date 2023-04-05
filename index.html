@@ -1,18 +1,17 @@
-<body><div class="container" id="imgbox">
-    <div id="prevText"></div>
-    <textarea id="textBox" placeholder="Add caption:"></textarea>
-    <input type="file" accept="image/*" name="image" id="file" style="display: nonene' " onchange="loadFile(event)">
-    <label for="file"><img src="images/upload.png" class="upload-icon"></label>
-</div></body>
-<script>
-    var textBox = document.getElementById("textBox");
-    var imgBox = document.getElementById("imgBox");
-    textBox.onkeyup = textBox.onkeypress = function(){
-    document.getElementById("prevText").innerHTML = this.value;
-    }
-    var loadFile = function(event){
-imgBox.style.backgroundImage = "url(" +URL.createObjectURL (event.target.files[0])+ ")";
-}
-
-    
-    </script>
+<link rel="stylesheet" href="b.css">
+<link rel="script" href="b.js">
+<body>
+    <form class="form">
+        
+          
+          <div class="log"></div>
+        </form>
+        
+        <div class="container">
+          <h5>Image info</h5>
+          <input type="file" accept="image/*" class="local" />
+          <button class="paste"> Paste from clipboard </button>
+          <div class="img"></div>
+          <button type="submit"> upload </button>
+        </div>
+</body>
