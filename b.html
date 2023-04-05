@@ -1,0 +1,18 @@
+<body><div class="container" id="imgbox">
+    <div id="prevText"></div>
+    <textarea id="textBox" placeholder="Add caption:"></textarea>
+    <input type="file" accept="image/*" name="image" id="file" style="display: nonene' " onchange="loadFile(event)">
+    <label for="file"><img src="images/upload.png" class="upload-icon"></label>
+</div></body>
+<script>
+    var textBox = document.getElementById("textBox");
+    var imgBox = document.getElementById("imgBox");
+    textBox.onkeyup = textBox.onkeypress = function(){
+    document.getElementById("prevText").innerHTML = this.value;
+    }
+    var loadFile = function(event){
+imgBox.style.backgroundImage = "url(" +URL.createObjectURL (event.target.files[0])+ ")";
+}
+
+    
+    </script>
